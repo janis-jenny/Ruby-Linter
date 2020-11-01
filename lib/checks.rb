@@ -16,6 +16,7 @@ class CheckErrror
       if element[-1] == ' ' && !element.empty?
           @errors << "#{@file_name.colorize(:magenta)} line: #{(line +1).to_s.colorize(:blue)} : Error: Trailing whitespace detected" 
       end 
+      return true
     end
   end
 
