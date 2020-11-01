@@ -1,4 +1,5 @@
 #start interaction between the user and the program
+require 'colorize'
 require_relative '../lib/checks.rb'
 
 ARGV.each do |path|
