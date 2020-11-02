@@ -1,4 +1,3 @@
-
 class FileReader
   attr_reader :file
 
@@ -6,4 +5,3 @@ class FileReader
     @file = File.open(file_path, 'r').readlines(chomp: true)
   end
 end
-
