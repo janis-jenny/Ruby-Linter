@@ -1,4 +1,3 @@
-require 'colorize'
 require_relative '../lib/checks.rb'
 
 describe CheckErrror do
@@ -8,6 +7,12 @@ describe CheckErrror do
   describe '#check_trailing_space' do
     it 'should return a error message when there is an empty space at the end of the line' do
       expect(checks.check_trailing_space).to eq(true)
+    end
+  end
+
+  describe '#check_trailing_space' do
+    it 'should return false when there is not an empty space at the end of the line' do
+      expect(checks.check_trailing_space).to eq(false)
     end
   end
 end

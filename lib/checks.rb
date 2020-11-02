@@ -14,10 +14,11 @@ class CheckErrror
   def check_trailing_space #this means only at the end
     @checker.file.each_with_index do |element, line|
       if element[-1] == ' ' && !element.empty?
-          @errors << "#{@file_name.colorize(:magenta)} line: #{(line +1).to_s.colorize(:blue)} : Error: Trailing whitespace detected" 
+        @errors << "#{@file_name.colorize(:magenta)} line: #{(line +1).to_s.colorize(:blue)} : Error: Trailing whitespace detected" 
+        return true
       end 
-      return true
     end
+    false
   end
 
   def check_space_after_colon 
@@ -27,8 +28,10 @@ class CheckErrror
         unless element[index_colon + 1] == ' '
         @errors << "#{@file_name.colorize(:magenta)} line: #{(line +1).to_s.colorize(:blue)}: Error: Missing space after colon"
         end
+        return true
       end 
     end
+    false
   end
 
   def check_space_before_open_bracket
@@ -38,8 +41,10 @@ class CheckErrror
         unless element[index_bracket - 1] == ' ' || index_bracket == 0
           @errors << "#{@file_name.colorize(:magenta)} line: #{(line +1).to_s.colorize(:blue)}: Error: Missing space before the bracket"
         end
+        return true
       end 
     end
+    false
   end
 
   def check_before_comment
@@ -49,8 +54,10 @@ class CheckErrror
         unless element[index_char + 1] == ' ' 
           @errors << "#{@file_name.colorize(:magenta)} line: #{(line +1).to_s.colorize(:blue)}: Error: Missing space before the comment"
         end
+        return true
       end 
     end
+    false
   end
 
   def check_after_comment
@@ -61,7 +68,9 @@ class CheckErrror
         unless element[index_comment - 1] == ' ' || index_comment == 0
           @errors << "#{@file_name.colorize(:magenta)} line: #{(line +1).to_s.colorize(:blue)}: Error: Missing space after the comment"
         end
+        return true
       end 
     end
+    false
   end
 end
