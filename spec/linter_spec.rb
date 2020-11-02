@@ -1,24 +1,33 @@
-require_relative '../lib/checks.rb'
+# rubocop:disable Metrics/BlockLength
+# frozen_string_literal: true
+
+require_relative '../lib/checks'
 
 describe CheckErrror do
   let(:checks) { CheckErrror.new('style.css') }
-  let(:line) { '1'}
- 
+  let(:line) { '1' }
+
   describe '#check_trailing_space' do
     it 'should return a error message when there is an empty space at the end of the line' do
       expect(checks.check_trailing_space).to eq(true)
     end
   end
 
-  describe '#check_space_after_colon ' do
-    it 'should return a error message when there is not an empty space after colon' do
-      expect(checks.check_space_after_colon ).to eq(true)
+  describe '#check_trailing_space' do
+    it 'should return false when there is not an empty space at the end of the line' do
+      expect(checks.check_trailing_space).to eq(false)
     end
   end
 
   describe '#check_space_after_colon ' do
     it 'should return a error message when there is not an empty space after colon' do
-      expect(checks.check_space_after_colon ).to eq(true)
+      expect(checks.check_space_after_colon).to eq(true)
+    end
+  end
+
+  describe '#check_space_after_colon ' do
+    it 'should return a error message when there is not an empty space after colon' do
+      expect(checks.check_space_after_colon).to eq(true)
     end
   end
 
@@ -33,5 +42,12 @@ describe CheckErrror do
       expect(checks.check_before_comment).to eq(true)
     end
   end
-  
+
+  describe '#check_after_comment' do
+    it 'should return a error message when there is not an empty space after comment' do
+      expect(checks.check_before_comment).to eq(true)
+    end
+  end
 end
+
+# rubocop:enable Metrics/BlockLength
