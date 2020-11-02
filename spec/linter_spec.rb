@@ -28,6 +28,10 @@ describe CheckErrror do
     end
   end
 
-
+  describe '#check_before_comment' do
+    it 'should return a error message when there is not an empty space before comment' do
+      expect(checks.check_before_comment).to eq(true)
+    end
+  end
   
 end
