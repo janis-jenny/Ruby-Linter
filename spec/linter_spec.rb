@@ -13,12 +13,6 @@ describe CheckErrror do
     end
   end
 
-  describe '#check_trailing_space' do
-    it 'should return false when there is not an empty space at the end of the line' do
-      expect(checks.check_trailing_space).to eq(false)
-    end
-  end
-
   describe '#check_space_after_colon ' do
     it 'should return a error message when there is not an empty space after colon' do
       expect(checks.check_space_after_colon).to eq(true)
