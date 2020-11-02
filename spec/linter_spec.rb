@@ -1,6 +1,3 @@
-# rubocop:disable Metrics/BlockLength
-# frozen_string_literal: true
-
 require_relative '../lib/checks'
 
 describe CheckErrror do
@@ -43,5 +40,3 @@ describe CheckErrror do
     end
   end
 end
-
-# rubocop:enable Metrics/BlockLength

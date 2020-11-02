@@ -1,5 +1,3 @@
-# rubocop:disable Style/Documentation
-# frozen_string_literal: true
 
 class FileReader
   attr_reader :file
@@ -9,4 +7,3 @@ class FileReader
   end
 end
 
-# rubocop:enable Style/Documentation

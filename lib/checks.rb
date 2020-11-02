@@ -1,5 +1,4 @@
-# rubocop:disable Layout/LineLength, Style/Documentation
-# frozen_string_literal: true
+# rubocop:disable Layout/LineLength
 
 require 'colorize'
 require_relative 'file_reader'
@@ -77,4 +76,4 @@ class CheckErrror
   end
 end
 
-# rubocop:enable Layout/LineLength, Style/Documentation
+# rubocop:enable Layout/LineLength
