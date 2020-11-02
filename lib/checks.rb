@@ -27,7 +27,7 @@ class CheckErrror
     @checker.file.each_with_index do |element, line|
       next unless element.include?(':')
 
-      index_colon = element.index(':') 
+      index_colon = element.index(':')
       unless element[index_colon + 1] == ' '
         @errors << "#{@file_name.colorize(:magenta)} line: #{(line + 1).to_s.colorize(:blue)}: Error: Missing space after colon"
       end
@@ -66,7 +66,7 @@ class CheckErrror
     @checker.file.each_with_index do |element, line|
       next unless element.include?('*/')
 
-      element.slice!('/*') 
+      element.slice!('/*')
       index_comment = element.index('*')
       unless element[index_comment - 1] == ' ' || index_comment.zero?
         @errors << "#{@file_name.colorize(:magenta)} line: #{(line + 1).to_s.colorize(:blue)}: Error: Missing space after the comment"
