@@ -4,18 +4,14 @@ describe CheckErrror do
   let(:checks) { CheckErrror.new('style.css') }
 
   describe '#check_trailing_space' do
-    line = 6
     it 'should return a error message when there is an empty space at the end of the line 6' do
       expect(checks.check_trailing_space).to eq(true)
     end
   end
 
   describe '#check_trailing_space' do
-    element = 0
-    if element[-1] != ' ' 
-      it 'should return nill when there is no an empty space at the end of the line 6' do
-        expect(checks.check_trailing_space).to be(nil)
-      end
+    it 'should return nill when there is no an empty space at the end of the line 6' do
+      expect(checks.check_trailing_space).to be(false)
     end
   end
 

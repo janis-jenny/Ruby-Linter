@@ -11,5 +11,5 @@ ARGV.each do |path|
   check_error.check_before_comment
   check_error.check_after_comment
   puts check_error.errors
-
+  
 end

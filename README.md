@@ -71,16 +71,27 @@ The results are presented to the user in the console with a line of text that in
 ![Errors screenshot](./img/errors.png)
 
 ### ⌨️ How to run the linter
-To run the linter the user has to be inside the project root folder and then in the console type the following command:
-> **ruby ./bin/main.rb {Filename}**
 
-Where the {Filename} represents the optional parameter for for checking a single file. The files to be checked can be anywhere inside the project folder, the linter will look for them automatically.
+To run the linter the user has to be inside the project root folder and then in the console type the following command:
+> **$ ruby ./bin/main.rb {Filename}**
+
+Where the {Filename} represents the optional parameter for checking a single file. The files to be checked can be anywhere inside the project folder, the linter will look for them automatically.
 
 The linter will let you know what is going on and it has several errors that it can give.
 
 ## 🔎 Test Code with Rspec
 
-To be able to test your code with Rspec, you should have Ruby and Rspec installed in your computer. To install rspec type in your terminal `gem install rspec`. After installing rspec, just got to the project folder and run `rspec` in the terminal.
+RSpec is used for the test, to install the gem file, run:
+
+> $ bundle install
+
+But before that, make sure you have bundler installed in your system, else run: 
+
+> $ gem install bundler
+
+To be able to test your code with Rspec, just got to the project folder and run `rspec` in the terminal.
+
+> $ rspec
 
 **Enjoy my project!**
 
