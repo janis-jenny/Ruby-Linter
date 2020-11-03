@@ -62,5 +62,4 @@ describe CheckErrror do
       expect(checks.check_after_comment == false).to eq(false)
     end
   end
-
 end
