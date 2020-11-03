@@ -1,5 +1,5 @@
-# Ruby-Linter
-to run my linter after you clone it you will run this command on the terminal and then you put the file name
+
+
 <p align="center">
   <a href="https://github.com/jcy2704/oop-ruby">
     <img src="https://res.cloudinary.com/growsurf-prod/image/upload/v1582211139/production/gnysw2objzekbagrqiax.png" alt="Logo" width="350" height="70">
@@ -116,8 +116,7 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- The Cupids team for review and suggestions
 
 ## 📝 License
 
